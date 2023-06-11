@@ -1,0 +1,18 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t',
+          'us-central1-docker.pkg.dev/ricebuddy-ml/cloud-run-source-deploy/api:latest',
+          '.']
+  
+  - name: 'gcr.io/cloud-builders/docker',
+    args: ['push',
+          'us-central1-docker.pkg.dev/ricebuddy-ml/cloud-run-source-deploy/api:latest']
+  
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['run', 'deploy', 'api' ,
+          '--allow-unauthenticated',
+          '--region=asia-southeast2',
+          '--image=us-central1-docker.pkg.dev/ricebuddy-ml/cloud-run-source-deploy/api:latest',
+          '--port=5000', 
+          '--memory=2Gi',
+          '--min-instances=1']
