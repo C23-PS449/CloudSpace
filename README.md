@@ -4,7 +4,7 @@ This is Repository for Cloud in this Capstone Project
 Explanation of back-end and cloud computing
 
 
-# LOCAL DEPLOYMENT
+# Local Deployment and How to Run
 1. Install the Python Programming Language.
 2. Install some libraries before running it: flask, gunicorn, tensorflow, numpy and pillow.
 3. Make a folder for RiceBuddy model.h5 with main.py.
@@ -15,7 +15,7 @@ Explanation of back-end and cloud computing
    will appear according to the label on the model.
 
 
-# CLOUD DEPLOYMENT
+# Cloud Deployment
 Deploy on Cloud Run with Cloud Build
 
 
