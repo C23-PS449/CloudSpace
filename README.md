@@ -16,8 +16,11 @@ Explanation of back-end and cloud computing
 
 
 # Cloud Deployment
-Deploy on Cloud Run with Cloud Build
-
+1. Enable the Cloud Build, Cloud Run, Container Registry, and Resource Manager APIs.
+2. install the Google Cloud CLI
+3. Open the Cloud Build settings page in the Google Cloud console
+4. In the Service account permissions panel, set the status of the Cloud Run Admin role to ENABLED
+5. Create a build trigger with the config file created
 
 # main.py 
 Is an API implementation using the Flask framework to predict labels on images in our group. Here is an explanation for each part of the code:
