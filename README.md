@@ -5,7 +5,8 @@ Explanation of back-end and cloud computing
 
 
 # LOCAL DEPLOYMENT
-
+Install some library before run it : 
+Flask, gunicorn, tensorflow, numpy, pillow
 
 # CLOUD DEPLOYMENT
 Deploy on Cloud Run with Cloud Build
