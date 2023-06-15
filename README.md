@@ -66,10 +66,12 @@ Initialize the Flask object as the main application.
 #Label prediction function
 def predict_label(img):
    i = np.asarray(img) / 255.0
+   #sesuai dengan input_size yang digunakan pada saat pembuatan model
    i = i.reshape(1, 100, 100, 3)
    pred = model.predict(i)
    result = label[np.argmax(pred)]
    return result
+
 
 
 The predict_label function accepts an image as input, pre-processes the image, and uses the model to make predictions. The prediction results are converted to class labels using the argmax index on the model output.
