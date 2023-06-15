@@ -4,6 +4,13 @@ This is Repository for Cloud in this Capstone Project
 Explanation of back-end and cloud computing
 
 
+# LOCAL DEPLOYMENT
+
+
+# CLOUD DEPLOYMENT
+Deploy on Cloud Run with Cloud Build
+
+
 # main.py 
 Is an API implementation using the Flask framework to predict labels on images in our group. Here is an explanation for each part of the code:
 
