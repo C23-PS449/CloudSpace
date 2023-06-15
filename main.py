@@ -23,7 +23,7 @@ def predict_label(img):
    result = label[np.argmax(pred)]
    return result
 
-@app.route("/predict", methods=["GET","POST"])
+@app.route("/predict", methods=["POST"])
 def index():
    file = request.files.get('file')
    if file is None or file.filename == "":
@@ -33,7 +33,7 @@ def index():
    img = Image.open(io.BytesIO(image_bytes))
    img = img.resize((100,100), Image.NEAREST)
    pred_img = predict_label(img)
-   return pred_img
+   return jsonify({"prediction": pred_img})
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0", port = "5000")
