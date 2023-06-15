@@ -78,7 +78,7 @@ The predict_label function accepts an image as input, pre-processes the image, a
 
 
 #Prediction endpoints
-@app.route("/predict", methods=["GET","POST"])
+@app.route("/predict", methods=["POST"])
 def index():
    file = request.files.get('file')
    if file is None or file.filename == "":
@@ -88,10 +88,10 @@ def index():
    img = Image.open(io.BytesIO(image_bytes))
    img = img.resize((100,100), Image.NEAREST)
    pred_img = predict_label(img)
-   return pred_img
+   return jsonify({"prediction": pred_img})
 
 
-This is the /predict endpoint that accepts GET or POST methods. When an image is submitted via a POST request, it is uploaded, resized to 100x100 pixels, and then predicted using the predict_label function. The prediction label is then returned as a response from the API.
+This is the /predict endpoint that accepts POST methods. When an image is submitted via a POST request, it is uploaded, resized to 100x100 pixels, and then predicted using the predict_label function. The prediction label is then returned as a response from the API.
 
 
 #Running applications
