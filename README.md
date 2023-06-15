@@ -5,8 +5,15 @@ Explanation of back-end and cloud computing
 
 
 # LOCAL DEPLOYMENT
-Install some library before run it : 
-Flask, gunicorn, tensorflow, numpy, pillow
+1. Install the Python Programming Language.
+2. Install some libraries before running it: flask, gunicorn, tensorflow, numpy and pillow.
+3. Make a folder for RiceBuddy model.h5 with main.py.
+4. Run main.py on your editor (ex: using Visual Studio Code).
+5. You will get a request as follows: Running on http://127.0.0.1:5000
+6. Please copy the link, then paste it in Postman, don't forget to add an endpoint (predict), Send request by Body, also set the Key    
+   value with the name (File) must be, then select files, finally upload files, and click the send button. So, the results of the send 
+   will appear according to the label on the model.
+
 
 # CLOUD DEPLOYMENT
 Deploy on Cloud Run with Cloud Build
